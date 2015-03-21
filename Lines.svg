@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+  "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg width="5cm" height="4cm"
+     xmlns="http://www.w3.org/2000/svg">
+  <desc>
+    Four separate rectangles
+  </desc>
+
+    <line x1='1cm' y1='0.5cm' x2='0.5cm' y2='0.5cm'
+          stroke='green' stroke-width='3'/>
+    <line x1='.5cm' y1='0.5cm' x2='.5cm' y2='1.5cm'
+          stroke='red' stroke-width='3'/>
+    <line x1='.5cm' y1='1.5cm' x2='1cm' y2='1.5cm'
+          stroke='maroon' stroke-width='3'/>
+
+    <line x1='1.2cm' y1='0.5cm' x2='1.2cm' y2='1.5cm'
+          stroke='blue' stroke-width='3'/>
+    <line x1='1.2cm' y1='1.0cm' x2='1.7cm' y2='1.0cm'
+          stroke='cyan' stroke-width='3'/>
+
+  <!-- Show outline of canvas using 'rect' element -->
+  <rect x=".01cm" y=".01cm" width="4.98cm" height="3.98cm"
+        fill="none" stroke="blue" stroke-width=".02cm" />
+
+</svg>

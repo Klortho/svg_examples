@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type='text/css'>
+      div.background-cat {
+        color: #ddd;
+        background-image: url("cat.svg");
+        background-size: 100% 100%;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>A cat:</p>
+    <img src='cat.svg' title="Cat Image" alt="Stick Figure of a Cat"/>
+
+    <p>
+      Note that the width here overrides the width in the SVG image itself.
+    </p>
+    <img src='cat.svg' title="Cat Image" alt="Stick Figure of a Cat"
+      width='80px'/>
+
+    <p>The next image is here because it's declared as the background-image in CSS.
+        Note that you can also use SVG inside `list-image` (for fancy bullets) or
+        `border-image` (for fancy borders).
+    </p>
+    <div class='background-cat'>
+      <p>Now is the time for all good men to come to the aid of their country.
+        Jackdaws love my big sphinx of quartz. The quick brown fox jumps over
+        the lazy dogs. Now is the time for all good men to come to the aid of their country.
+        Jackdaws love my big sphinx of quartz. The quick brown fox jumps over
+        the lazy dogs. Now is the time for all good men to come to the aid of their country.
+        Jackdaws love my big sphinx of quartz. The quick brown fox jumps over
+        the lazy dogs. Now is the time for all good men to come to the aid of their country.
+        Jackdaws love my big sphinx of quartz. The quick brown fox jumps over
+        the lazy dogs. Now is the time for all good men to come to the aid of their country.
+        Jackdaws love my big sphinx of quartz. The quick brown fox jumps over
+        the lazy dogs.
+      </p>
+    </div>
+
+    <p>Including it using the &lt;object&gt; element. This is probably the best way to do
+      it, in general, because, unlike when it is included as an image, embedded SVG can 
+      include external files, and scripts can communicate between the object and the parent 
+      page.</p>
+    <object data="cat.svg" type="image/svg+xml"
+            title="Cat Object" alt="Stick Figure of a Cat" >
+      <!-- As a fallback, include text or a raster image file -->
+      <p>No SVG support! Here's a substitute:</p>
+      <img src="cat.png" title="Cat Fallback"
+         alt="A raster rendering of a Stick Figure of a Cat" />
+    </object>
+
+    <p>Of course, you can mix the SVG right into the HTML document:</p>
+    <div>
+      <svg width='140' height='170'
+           xmlns='http://www.w3.org/2000/svg'
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Cat</title>
+        <desc>Figure of a cat</desc>
+        <circle cx="70" cy="95" r="50" style="stroke: black; fill: none"/>
+        <circle cx="55" cy="80" r="5" stroke="black" fill="#339933"/>
+        <circle cx="85" cy="80" r="5" stroke="black" fill="#339933"/> 
+        <g id="whiskers">
+          <line x1="75" y1="95" x2="135" y2="85" style="stroke: black;"/>
+          <line x1="75" y1="95" x2="135" y2="105" style="stroke: black;"/>
+        </g>
+        <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)"/>
+        <polyline points="108 62,  90 10,  70 45,  50, 10,  32, 62"
+          style="stroke: black; fill: none;" />
+        <polyline points="35 110, 45 120, 95 120, 105, 110"
+            style="stroke: black; fill: none;" />
+        <path d="M 75 90 L 65 90 A 5 10 0  0 0 75 90"
+          style="stroke: black; fill: #ffcccc"/>
+        <text x="60" y="165" style="font-family: sans-serif; font-size: 14pt;
+          stroke: none; fill: black;">Cat</text>
+      </svg> 
+    </div>
+
+    <p>
+      Just for fun, here's a &lt;foreignObject> inside SVG. I don't think 
+      this is somethign I'll use very often.</p>
+    <div>
+      <svg width='400' height='250' xmlns='http://www.w3.org/2000/svg'
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g transform="skewX(20)">
+          <switch>
+            <!-- select one child element  -->
+            <foreignObject x="1em" y="25%" width="10em" height="50%"
+               requiredFeatures=
+               "http://www.w3.org/TR/SVG11/feature#Extensibility">
+               <body xmlns="http://www.w3.org/1999/xhtml">
+                  <p>This is an XHTML paragraph embedded within an SVG!
+                     So this text will wrap nicely around multiple lines,
+                     but it will still be skewed from the SVG transform.
+                  </p>
+               </body>
+            </foreignObject>
+            <text x="1em" y="25%" dy="1em">
+              This SVG text won't wrap, so it will get cut off...
+            </text>
+          </switch>
+        </g>
+      </svg>
+    </div>
+
+  </body>
+</html>

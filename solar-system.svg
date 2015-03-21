@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width='1000' height='1000'
+     viewBox='-500 -500 1000 1000' viewport-fill='black'>
+
+  <!-- background -->
+  <rect x='-500' y='-500' width='1000' height='1000' fill='black' />
+
+  <!-- Sun -->
+  <circle id='sun' cx='0' cy='0' r='20' fill='yellow'/>
+
+  <!-- Mercury -->
+  <ellipse id='mercury-orbit' cx='0' cy='0' rx='58' ry='5.8' stroke='white' fill='none'/>
+  <circle id='mercury' cx='58' cy='0' r='2.4' stroke='none' fill='brown'/>
+
+  <!-- Venus -->
+  <ellipse id='venus-orbit' cx='0' cy='0' rx='108' ry='10.8' stroke='white' fill='none'/>
+  <circle id='venus' cx='108' cy='0' r='6.1' stroke='none' fill='rgb(171, 130, 76)'/>
+
+  <!-- Earth -->
+  <ellipse id='earth-orbit' cx='0' cy='0' rx='150' ry='15' stroke='white' fill='none'/>
+  <circle id='earth' cx='150' cy='0' r='6.4' stroke='none' fill='rgb(17, 57, 131)'/>
+
+  <!-- Mars -->
+  <ellipse id='mars-orbit' cx='0' cy='0' rx='228' ry='22.8' stroke='white' fill='none'/>
+  <circle id='mars' cx='228' cy='0' r='3.4' stroke='none' fill='rgb(220, 88, 29)'/>
+
+  <!-- Jupiter -->
+  <ellipse id='jupiter-orbit' cx='0' cy='0' rx='778' ry='77.8' stroke='white' fill='none'/>
+  <circle id='jupiter' cx='778' cy='0' r='70' stroke='none' fill='rgb(239, 212, 146)'/>
+
+  <!-- Saturn -->
+  <ellipse id='saturn-orbit' cx='0' cy='0' rx='1430' ry='143' stroke='white' fill='none'/>
+  <circle id='saturn' cx='1430' cy='0' r='58' stroke='none' fill='rgb(141, 126, 91)'/>
+
+  <!-- Uranus -->
+  <ellipse id='uranus-orbit' cx='0' cy='0' rx='2880' ry='288' stroke='white' fill='none'/>
+  <circle id='uranus' cx='2880' cy='0' r='25' stroke='none' fill='rgb(102, 255, 255)'/>
+
+  <!-- Neptune -->
+  <ellipse id='neptune-orbit' cx='0' cy='0' rx='4500' ry='450' stroke='white' fill='none'/>
+  <circle id='neptune' cx='4500' cy='0' r='25' stroke='none' fill='rgb(12, 113, 198)'/>
+
+</svg>
