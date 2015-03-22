@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width='1000' height='600'
+     viewBox='-500 -300 1000 600' viewport-fill='black'>
+
+  <circle cx='0' cy='0' r='16' fill='yellow'/>
+  <ellipse cx='0' cy='0' rx='46' ry='21' fill='none' stroke='black'/>
+</svg>
