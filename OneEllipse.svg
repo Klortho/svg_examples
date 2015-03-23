@@ -1,11 +1,11 @@
 <?xml version="1.0" standalone="yes"?>
 
-
 <svg:svg xmlns="http://example.org"
          xmlns:svg="http://www.w3.org/2000/svg"
-         width="4cm" height="8cm">
+         width="4cm" height="2cm">
 
-  <svg:ellipse cx="2cm" cy="4cm" rx="2cm" ry="1cm" />
+  <ellipse cx="30" cy="80" rx="10" ry="20"
+      style="stroke: black; fill: none;"/>
 
 </svg:svg>
 
